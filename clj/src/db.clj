@@ -1,8 +1,6 @@
 (ns crux-in-a-box.db
-  (:refer-clojure :exclude [get])
   (:require [clojure.java.io :as io]
-            [crux.api :as crux]
-            [crux.rocksdb]))
+            [crux.api :as crux]))
 
 (defn start-crux! []
   (letfn [(kv-store [dir]
