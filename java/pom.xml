@@ -1,104 +1,104 @@
 <project>
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.deobald</groupId>
-    <artifactId>cruxinabox</artifactId>
-    <version>0.0.1</version>
+  <groupId>com.github.deobald</groupId>
+  <artifactId>cruxinabox</artifactId>
+  <version>0.0.1</version>
 
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-   </properties>
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>juxt</groupId>
-            <artifactId>crux-core</artifactId>
-            <version>21.02-1.15.0-beta</version>
-        </dependency>
-        <dependency>
-            <groupId>juxt</groupId>
-            <artifactId>crux-rocksdb</artifactId>
-            <version>21.02-1.15.0-beta</version>
-        </dependency>
+  <dependencies>
+    <dependency>
+      <groupId>juxt</groupId>
+      <artifactId>crux-core</artifactId>
+      <version>21.02-1.15.0-beta</version>
+    </dependency>
+    <dependency>
+      <groupId>juxt</groupId>
+      <artifactId>crux-rocksdb</artifactId>
+      <version>21.02-1.15.0-beta</version>
+    </dependency>
 
-        <!-- logging: -->
-        <dependency>
-            <groupId>org.clojure</groupId>
-            <artifactId>tools.logging</artifactId>
-            <version>1.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
-        </dependency>
+    <!-- logging: -->
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>tools.logging</artifactId>
+      <version>1.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.30</version>
+    </dependency>
 
-        <!-- optional: -->
-        <dependency>
-            <groupId>juxt</groupId>
-            <artifactId>crux-lucene</artifactId>
-            <version>21.02-1.15.0-alpha</version>
-        </dependency>
-        <dependency>
-            <groupId>juxt</groupId>
-            <artifactId>crux-http-server</artifactId>
-            <version>21.02-1.15.0-alpha</version>
-        </dependency>
-    </dependencies>
+    <!-- optional: -->
+    <dependency>
+      <groupId>juxt</groupId>
+      <artifactId>crux-lucene</artifactId>
+      <version>21.02-1.15.0-alpha</version>
+    </dependency>
+    <dependency>
+      <groupId>juxt</groupId>
+      <artifactId>crux-http-server</artifactId>
+      <version>21.02-1.15.0-alpha</version>
+    </dependency>
+  </dependencies>
 
-    <repositories>
-        <repository>
-            <id>clojars</id>
-            <url>http://clojars.org/repo/</url>
-        </repository>
-    </repositories>
+  <repositories>
+    <repository>
+      <id>clojars</id>
+      <url>http://clojars.org/repo/</url>
+    </repository>
+  </repositories>
 
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
 
-        <plugins>
-          <plugin>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <configuration>
-              <archive>
-                <manifest>
-                  <mainClass>cruxinabox.Box</mainClass>
-                </manifest>
-              </archive>
-              <descriptorRefs>
-                <descriptorRef>jar-with-dependencies</descriptorRef>
-              </descriptorRefs>
-            </configuration>
-            <executions>
-              <execution>
-                <id>make-assembly</id> <!-- this is used for inheritance merges -->
-                <phase>package</phase> <!-- bind to the packaging phase -->
-                <goals>
-                  <goal>single</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>cruxinabox.Box</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id> <!-- this is used for inheritance merges -->
+            <phase>package</phase> <!-- bind to the packaging phase -->
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 
-        </plugins>
-    </build>
+    </plugins>
+  </build>
 </project>
