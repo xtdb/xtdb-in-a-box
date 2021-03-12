@@ -15,3 +15,9 @@ pom.xml.asc
 .lsp/
 clj/data/
 clj/target/
+java/data/
+java/target/
+java/.classpath
+java/.project
+.settings/
+.vscode/
