@@ -1,5 +1,5 @@
-pom.xml
-pom.xml.asc
+clj/**/pom.xml
+clj/**/pom.xml.asc
 *.jar
 *.class
 /lib/

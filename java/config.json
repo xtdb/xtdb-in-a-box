@@ -16,5 +16,11 @@
             "crux/module": "crux.rocksdb/->kv-store",
             "db-dir": "data/tx-log"
         }
-    }
+    },
+  "crux.lucene/lucene-store": {
+    "db-dir": "data/dev/lucene-dir"
+  },
+  "crux.http-server/server": {
+    "port": 9999
+  }
 }
