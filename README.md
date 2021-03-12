@@ -6,11 +6,15 @@ Please read the [Crux-in-a-Box How-To Guide](https://opencrux.com/howto/in-a-box
 
 ## Clojure
 
-The `/clj` directory contains a minimal Clojure project.
+The `/clj` directory contains a minimal Clojure project. Run it from a REPL.
 
 ## Java
 
-The `/java` directory contains a minimal Java project.
+The `/java` directory contains a minimal Java project. Run it with:
+
+```shell
+make && make run
+```
 
 ## License
 
