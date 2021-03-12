@@ -1,3 +1,5 @@
+package cruxinabox;
+
 import java.io.File;
 import java.io.IOException;
 import crux.api.Crux;
