@@ -1,8 +1,8 @@
-# crux-in-a-box
+# xtdb-in-a-box
 
-The simplest production-ready Crux setup.
+The simplest production-ready Xtdb setup.
 
-Please read the [Crux-in-a-Box How-To Guide](https://opencrux.com/howto/in-a-box.html).
+Please read the [XTDB Quickstart](https://xtdb.com/tutorials/quickstart/).
 
 ## Clojure
 

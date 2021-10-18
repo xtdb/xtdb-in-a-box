@@ -1,9 +1,9 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.deobald</groupId>
-  <artifactId>cruxinabox</artifactId>
-  <version>0.0.1</version>
+  <groupId>com.xtdb</groupId>
+  <artifactId>xtdbinabox</artifactId>
+  <version>0.0.2</version>
 
   <properties>
     <maven.compiler.source>11</maven.compiler.source>
@@ -12,14 +12,14 @@
 
   <dependencies>
     <dependency>
-      <groupId>juxt</groupId>
-      <artifactId>crux-core</artifactId>
-      <version>21.02-1.15.0-beta</version>
+      <groupId>com.xtdb</groupId>
+      <artifactId>xtdb-core</artifactId>
+      <version>1.19.0</version>
     </dependency>
     <dependency>
-      <groupId>juxt</groupId>
-      <artifactId>crux-rocksdb</artifactId>
-      <version>21.02-1.15.0-beta</version>
+      <groupId>com.xtdb</groupId>
+      <artifactId>xtdb-rocksdb</artifactId>
+      <version>1.19.0</version>
     </dependency>
 
     <!-- logging: -->
@@ -46,14 +46,14 @@
 
     <!-- optional: -->
     <dependency>
-      <groupId>juxt</groupId>
-      <artifactId>crux-lucene</artifactId>
-      <version>21.02-1.15.0-alpha</version>
+      <groupId>com.xtdb</groupId>
+      <artifactId>xtdb-lucene</artifactId>
+      <version>1.19.0</version>
     </dependency>
     <dependency>
-      <groupId>juxt</groupId>
-      <artifactId>crux-http-server</artifactId>
-      <version>21.02-1.15.0-alpha</version>
+      <groupId>com.xtdb</groupId>
+      <artifactId>xtdb-http-server</artifactId>
+      <version>1.19.0</version>
     </dependency>
   </dependencies>
 
@@ -81,7 +81,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>cruxinabox.Box</mainClass>
+              <mainClass>xtdbinabox.Box</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>

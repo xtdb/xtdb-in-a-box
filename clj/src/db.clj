@@ -1,21 +1,23 @@
-(ns crux-in-a-box.db
+(ns xtdb-in-a-box.db
   (:require [clojure.java.io :as io]
-            [crux.api :as crux]))
+            [xtdb.api :as xt]))
 
-(defn start-crux! []
+(println (System/getenv "XTDB_ENABLE_BYTEUTILS_SHA1"))
+
+(defn start-xtdb! []
   (letfn [(kv-store [dir]
-            {:kv-store {:crux/module 'crux.rocksdb/->kv-store
+            {:kv-store {:xtdb/module 'xtdb.rocksdb/->kv-store
 	                      :db-dir      (io/file dir)
                         :sync?       true}})]
-    (crux/start-node
-     {:crux/tx-log              (kv-store "data/dev/tx-log")
-	    :crux/document-store      (kv-store "data/dev/doc-store")
-      :crux/index-store         (kv-store "data/dev/index-store")
+    (xt/start-node
+     {:xtdb/tx-log              (kv-store "data/dev/tx-log")
+	    :xtdb/document-store      (kv-store "data/dev/doc-store")
+      :xtdb/index-store         (kv-store "data/dev/index-store")
       ;; optional:
-      :crux.lucene/lucene-store {:db-dir "data/dev/lucene-dir"}
-      :crux.http-server/server  {:port 9999}})))
+      :xtdb.lucene/lucene-store {:db-dir "data/dev/lucene-dir"}
+      :xtdb.http-server/server  {:port 9999}})))
 
-(def crux-node (start-crux!))
+(def xtdb-node (start-xtdb!))
 
-(defn stop-crux! []
-  (.close crux-node))
+(defn stop-xtdb! []
+  (.close xtdb-node))
