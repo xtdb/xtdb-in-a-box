@@ -2,7 +2,7 @@
 
 The simplest production-ready Xtdb setup.
 
-Please read the [XTDB Quickstart](https://xtdb.com/tutorials/quickstart/).
+Please read the [XTDB Quickstart](https://xtdb.com/guides/quickstart/).
 
 ## Clojure
 
