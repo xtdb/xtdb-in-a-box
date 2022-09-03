@@ -17,6 +17,8 @@
                  [com.xtdb/xtdb-lucene "1.19.0"]
                  [com.xtdb/xtdb-http-server "1.19.0"]]
 
+  :repl-options {:init-ns xtdb-in-a-box.db}
+
   ;; XTDB SHA1 workaround for JDK 17 on MacOS:
   :plugins [[lein-with-env-vars "0.2.0"]]
 
