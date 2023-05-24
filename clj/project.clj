@@ -4,8 +4,8 @@
   :dependencies [[org.clojure/clojure "1.10.1"]
 
                  ;; required:
-                 [com.xtdb/xtdb-core "1.19.0"]
-                 [com.xtdb/xtdb-rocksdb "1.19.0"]
+                 [com.xtdb/xtdb-core "1.23.2"]
+                 [com.xtdb/xtdb-rocksdb "1.23.2"]
 
                  ;; logging:
                  [org.clojure/tools.logging "1.1.0"]
@@ -14,8 +14,8 @@
                  [org.slf4j/slf4j-api "1.7.30"]
 
                  ;; optional:
-                 [com.xtdb/xtdb-lucene "1.19.0"]
-                 [com.xtdb/xtdb-http-server "1.19.0"]]
+                 [com.xtdb/xtdb-lucene "1.23.2"]
+                 [com.xtdb/xtdb-http-server "1.23.2"]]
 
   :repl-options {:init-ns xtdb-in-a-box.db}
 
