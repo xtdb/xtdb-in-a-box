@@ -14,12 +14,12 @@
     <dependency>
       <groupId>com.xtdb</groupId>
       <artifactId>xtdb-core</artifactId>
-      <version>1.19.0</version>
+      <version>1.23.2</version>
     </dependency>
     <dependency>
       <groupId>com.xtdb</groupId>
       <artifactId>xtdb-rocksdb</artifactId>
-      <version>1.19.0</version>
+      <version>1.23.2</version>
     </dependency>
 
     <!-- logging: -->
@@ -48,12 +48,12 @@
     <dependency>
       <groupId>com.xtdb</groupId>
       <artifactId>xtdb-lucene</artifactId>
-      <version>1.19.0</version>
+      <version>1.23.2</version>
     </dependency>
     <dependency>
       <groupId>com.xtdb</groupId>
       <artifactId>xtdb-http-server</artifactId>
-      <version>1.19.0</version>
+      <version>1.23.2</version>
     </dependency>
   </dependencies>
 
